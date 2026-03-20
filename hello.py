@@ -1,1 +1,6 @@
-print("Hello World")
+print("Welcome to your budget calculator!")
+print("Pick one of the following options:")
+print("1. Add income")
+print("2. Add expense")
+print("3. View budget")
+print("4. Exit")
