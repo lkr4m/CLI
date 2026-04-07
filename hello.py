@@ -1,8 +1,8 @@
 
 def main():
+    print("\nWelcome to your budget calculator!")
     balance = 0.0 
     while True:
-        print("Welcome to your budget calculator!")
         print("Pick one of the following options:")
         print("1. Add income")
         print("2. Add expense")
@@ -23,6 +23,7 @@ def main():
             print("Invalid choice. Please try again.")
 
 def add_income(balance):
+    print("\n--- Add Income ---")
     while True:
         amount = float(input("Enter income amount: "))
         balance += amount
@@ -30,22 +31,21 @@ def add_income(balance):
 
         choice = input("Do you want to add another income? (y/n): ").lower()
         if choice != 'y':
-            break
-    return balance
+            return balance
 
 def add_expense(balance):
-    while True:
+     print("\n--- Add Expense ---")
+     while True:
         amount = float(input("Enter expense amount: "))
         balance -= amount 
         print(f"Added expense: ${amount:.2f}")
 
         choice = input("Do you want to add another expense? (y/n): ").lower()
         if choice != 'y':
-            break
-    return balance
+            return balance
 
 def view_budget(balance):
     print(f"Current budget: ${balance:.2f}")
-
+    input("Press Enter to return to the main menu...")
 
 main()
